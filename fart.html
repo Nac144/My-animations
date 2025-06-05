@@ -39,14 +39,34 @@ p, ul, blockquote, table {
   text-shadow: 0 0 4px rgba(0,0,0,0.5)
 }
 
-/* Blockquote with subtle styling */
 blockquote {
-  background-color: #111;
-  border-left: 4px solid #ff8c00;
-  padding: 15px 25px;
+ text-align: center;
+  /* existing styles */
+  position: relative; /* needed for positioning pseudo elements */
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 4em;
+  color: gold;
+  position: absolute;
+  left: 10px;
+  top: -10px;
   font-style: italic;
-  color: #ccc;
-  box-shadow: 0 0 10px rgba(255, 140, 0, 0.4);
+  opacity: 0.3;
+}
+
+blockquote:after {
+  content: close-quote;
+  font-size: 4em;
+  color: gold;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  font-style: italic;
+  opacity: 0.3;
+}
+
 }
 
 /* Table styling with subtle borders and shading */
