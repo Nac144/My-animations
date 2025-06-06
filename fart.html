@@ -275,32 +275,47 @@ a {
       allowfullscreen
     ></iframe>
   </div>
-section.daath {
-  position: relative;
-  background-color: #0a0a0a;
-  padding: 20px;
-  border-radius: 15px;
-  overflow: hidden;
-}
+</body><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const trailSize = 20; // pixel size of each pentagram
+  const trailLifetime = 800; // how long each stays in ms
+  const maxTrail = 30; // max number of pentagrams
 
-section.daath::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150px;
-  height: 150px;
-  background: url('https://pngimg.com/d/pentagram_PNG15.png') center center no-repeat;
-  background-size: contain;
-  opacity: 0.08;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-}
+  let trailElements = [];
 
-section.daath > * {
-  position: relative;
-  z-index: 1;
-}
+  document.addEventListener("mousemove", (e) => {
+    const trail = document.createElement("img");
+    trail.src = "https://pngimg.com/d/pentagram_PNG15.png";
+    trail.style.position = "fixed";
+    trail.style.pointerEvents = "none";
+    trail.style.width = trailSize + "px";
+    trail.style.height = trailSize + "px";
+    trail.style.left = (e.clientX - trailSize / 2) + "px";
+    trail.style.top = (e.clientY - trailSize / 2) + "px";
+    trail.style.opacity = "0.4";
+    trail.style.zIndex = "9999";
+    trail.style.transition = `opacity ${trailLifetime}ms ease-out, transform ${trailLifetime}ms ease-out`;
+    document.body.appendChild(trail);
 
+    // animate fade and slight scale
+    setTimeout(() => {
+      trail.style.opacity = "0";
+      trail.style.transform = "scale(0.6) rotate(90deg)";
+    }, 10);
+
+    // remove after fade
+    setTimeout(() => {
+      trail.remove();
+    }, trailLifetime);
+
+    // manage trail limit
+    trailElements.push(trail);
+    if (trailElements.length > maxTrail) {
+      const oldest = trailElements.shift();
+      if (oldest) oldest.remove();
+    }
+  });
+});
+</script>
+
+</html>
