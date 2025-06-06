@@ -6,181 +6,182 @@
   <title>Da’ath — Gnosis Beyond the Binary Mind</title>
   <style>
   /* Body text enhancements */
-  body {
-    font-family: 'Georgia', serif;
-    color: #eee;
-    background-color: #0a0a0a;
-    line-height: 1.8;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-    padding: 20px;
-    margin: 0;
-  }
-  /* Headings with gradient text and subtle shadow */
-  h1, h2, h3 {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.6em;
-    background: linear-gradient(90deg, #f0f0f0, #ff8c00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-    transition: color 0.3s ease-in-out;
-    color: initial;
-    text-align: center;
-  }
+body {
+  font-family: 'Georgia', serif;
+  color: #eee;
+  background-color: #0a0a0a;
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  padding: 20px;
+}
+/* Headings with gradient text and subtle shadow */
+h1, h2, h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6em;
+  background: linear-gradient(90deg, #f0f0f0, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  transition: color 0.3s ease-in-out;
+}
 
-  /* Paragraph styling */
-  p, ul, blockquote, table {
-    max-width: 800px;
-    margin: 1.2em auto;
-    color: #ddd;
-    font-size: 1.1em;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    text-shadow: 0 0 4px rgba(0,0,0,0.5);
-  }
+/* Paragraph styling */
+p, ul, blockquote, table {
+  max-width: 800px;
+  margin: 1.2em auto;
+  color: #ddd;
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 4px rgba(0,0,0,0.5)
+}
 
-  blockquote {
-    text-align: center;
-    position: relative; /* needed for positioning pseudo elements */
-    background-color: #1a1a1a;
-    border-left: 3px solid #777;
-    padding: 10px 20px;
-    margin: 20px auto;
-    font-style: italic;
-  }
+blockquote {
+ text-align: center;
+  /* existing styles */
+  position: relative; /* needed for positioning pseudo elements */
+}
 
-  blockquote:before {
-    content: open-quote;
-    font-size: 4em;
-    color: gold;
-    position: absolute;
-    left: 10px;
-    top: -10px;
-    font-style: italic;
-    opacity: 0.3;
-  }
+blockquote:before {
+  content: open-quote;
+  font-size: 4em;
+  color: gold;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  font-style: italic;
+  opacity: 0.3;
+}
 
-  blockquote:after {
-    content: close-quote;
-    font-size: 4em;
-    color: gold;
-    position: absolute;
-    right: 10px;
-    bottom: -20px;
-    font-style: italic;
-    opacity: 0.3;
-  }
+blockquote:after {
+  content: close-quote;
+  font-size: 4em;
+  color: gold;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  font-style: italic;
+  opacity: 0.3;
+}
 
-  /* Table styling with subtle borders and shading */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2em 0;
-    font-size: 1em;
-  }
+/* Table styling with subtle borders and shading */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 1em;
+}
 
-  th, td {
-    border: 1px solid #444;
-    padding: 12px 15px;
-    color: #eee;
-  }
+th, td {
+  border: 1px solid #444;
+  padding: 12px 15px;
+  color: #eee;
+}
 
-  th {
-    background-color: #222;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+th {
+  background-color: #222;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
 
-  tr:nth-child(even) {
-    background-color: #1a1a1a;
-  }
+tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
 
-  /* Links styling */
-  a {
-    color: #ff8c00;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+/* Links if you want to style */
+a {
+  color: #ff8c00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  /* Header styles */
-  header {
-    background: radial-gradient(circle at center, #222 0%, #000 100%);
-    padding: 60px 20px;
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #333;
-  }
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #0a0a0a;
+      color: #f2f2f2;
+      line-height: 1.6;
+      padding: 20px;
+    }
 
-  header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-  }
+    h1, h2, h3 {
+      color: #e0e0e0;
+      text-align: center;
+    }
 
-  header p {
-    font-size: 1.2em;
-    color: #ccc;
-    max-width: 600px;
-    margin: auto;
-  }
+    p, ul, blockquote, table {
+      max-width: 800px;
+      margin: auto;
+    }
 
-  /* Inserted image style */
-  #intro-image {
-    display: block;
-    max-width: 150px;
-    margin: 0 auto 30px auto;
-    border-radius: 15px;
-    box-shadow: 0 0 15px #ff8c00cc;
-  }
+    ul {
+      padding-left: 1.2em;
+    }
 
-  /* === New style for section with pentagram background === */
-  .pentagram-background {
-    position: relative;
-    background-color: #0a0a0a;
-    padding: 20px;
-    margin: 30px auto;
-    max-width: 820px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #ff8c00cc;
-    overflow: hidden;
-  }
+    blockquote {
+      background-color: #1a1a1a;
+      border-left: 3px solid #777;
+      padding: 10px 20px;
+      margin: 20px auto;
+    }
 
-  .pentagram-background::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    background: url('https://pngimg.com/d/pentagram_PNG15.png') no-repeat center center;
-    background-size: contain;
-    opacity: 0.07;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    user-select: none;
-    filter: brightness(0.9);
-  }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+    }
 
-  /* Keep text above the ::before */
-  .pentagram-background > * {
-    position: relative;
-    z-index: 1;
-  }
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+    }
 
-  /* Floating video styles */
-  #floating-video {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 320px;
-    height: 180px;
-    z-index: 9999;
-    border: 3px solid #222;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-    background: black;
-  }
+    th {
+      background-color: #222;
+    }
+
+    tr:nth-child(even) {
+      background-color: #111;
+    }
+
+    em {
+      color: #cccccc;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    header {
+      background: radial-gradient(circle at center, #222 0%, #000 100%);
+      padding: 60px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #333;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Inserted image style */
+    #intro-image {
+      display: block;
+      max-width: 150px;
+      margin: 0 auto 30px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #ff8c00cc;
+    }
   </style>
 </head>
 <body>
@@ -205,7 +206,7 @@
   <h3>Gnosis vs the Binary Left Brain</h3>
   <p>Modern neuroscience backs this up. The <strong>left hemisphere</strong> drives linear logic, future planning, and the ego-narrative. The <strong>right hemisphere</strong> perceives <em>holistic presence</em>, unity, and timeless awareness.</p>
 
-  <blockquote>
+  <blockquote style="font-style: italic; margin: 10px 20px; padding: 10px; border-left: 3px solid #555;">
     “The left hemisphere says: I am. I need to do. I must plan.”<br>
     “The right hemisphere says: I am connected. I am now.”<br>
     — Jill Bolte Taylor
@@ -214,16 +215,13 @@
   <p>Da’ath bypasses the repetitive, <strong>threat-detection loops</strong> of the binary mind — transcending ritualized behavior and assumption-driven logic. Instead, it offers <strong>direct knowing</strong>: not belief, not analysis, but <em>being-awareness</em>.</p>
 
   <h3>Saturn, the Black Cube, and the Limits of the Binary Mind</h3>
-  <!-- Wrap this section in the pentagram background container -->
-  <section class="pentagram-background">
-    <p>In esoteric symbolism, <strong>Saturn</strong> and the <strong>Black Cube</strong> represent limitation, structure, and form. These relate to the left-brain world: defined by time, death, logic, and ritual. Da’ath stands in contrast — a <strong>gateway beyond structure</strong>.</p>
+  <p>In esoteric symbolism, <strong>Saturn</strong> and the <strong>Black Cube</strong> represent limitation, structure, and form. These relate to the left-brain world: defined by time, death, logic, and ritual. Da’ath stands in contrast — a <strong>gateway beyond structure</strong>.</p>
 
-    <ul>
-      <li><strong>Saturn = Binah:</strong> Structure, time, boundaries, death.</li>
-      <li><strong>Black Cube:</strong> Material prison, six-sided law, rigid dualism.</li>
-      <li><strong>Da’ath:</strong> 11th hidden gate, infinite point beyond form.</li>
-    </ul>
-  </section>
+  <ul>
+    <li><strong>Saturn = Binah:</strong> Structure, time, boundaries, death.</li>
+    <li><strong>Black Cube:</strong> Material prison, six-sided law, rigid dualism.</li>
+    <li><strong>Da’ath:</strong> 11th hidden gate, infinite point beyond form.</li>
+  </ul>
 
   <h3 style="text-align: center;">Summary Table</h3>
   <table>
@@ -241,4 +239,47 @@
         <td>Tree of Knowledge, Portal to Gnosis</td>
       </tr>
       <tr>
-        <td><strong>Cognitive
+        <td><strong>Cognitive</strong></td>
+        <td>Linear logic, threat modeling, ritual</td>
+        <td>Holistic insight, soul-knowing, unity</td>
+      </tr>
+      <tr>
+        <td><strong>Spiritual</strong></td>
+        <td>Separation, form, ego-narrative</td>
+        <td>Integration, formless gnosis, present-being</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="text-align: center; font-style: italic;">Da’ath is not a belief. It is not a thought. It is what happens <strong>when you stop thinking</strong> and meet reality as it is.</p>
+
+  <div id="floating-video" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    height: 180px;
+    z-index: 9999;
+    border: 3px solid #222;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    background: black;
+  ">
+    <iframe
+      width="320"
+      height="180"
+      src="https://www.youtube.com/embed/MV_3Dpw-BRY"
+      title="Floating Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</body>
+  section.daath {
+  background: url('https://pngimg.com/d/pentagram_PNG15.png') center center no-repeat;
+  background-size: 150px 150px;
+  opacity: 0.08;
+}
+
+</html>
