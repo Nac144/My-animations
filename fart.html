@@ -275,11 +275,32 @@ a {
       allowfullscreen
     ></iframe>
   </div>
-</body>
-  section.daath {
-  background: url('https://pngimg.com/d/pentagram_PNG15.png') center center no-repeat;
-  background-size: 150px 150px;
-  opacity: 0.08;
+section.daath {
+  position: relative;
+  background-color: #0a0a0a;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-</html>
+section.daath::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background: url('https://pngimg.com/d/pentagram_PNG15.png') center center no-repeat;
+  background-size: contain;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+section.daath > * {
+  position: relative;
+  z-index: 1;
+}
+
