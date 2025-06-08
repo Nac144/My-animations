@@ -3,319 +3,585 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Da’ath — Gnosis Beyond the Binary Mind</title>
+  <title>Da'ath — The Portal to Gnosis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
-  /* Body text enhancements */
-body {
-  font-family: 'Georgia', serif;
-  color: #eee;
-  background-color: #0a0a0a;
-  line-height: 1.8;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-  padding: 20px;
-}
-/* Headings with gradient text and subtle shadow */
-h1, h2, h3 {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.6em;
-  background: linear-gradient(90deg, #f0f0f0, #ff8c00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-  transition: color 0.3s ease-in-out;
-}
-
-/* Paragraph styling */
-p, ul, blockquote, table {
-  max-width: 800px;
-  margin: 1.2em auto;
-  color: #ddd;
-  font-size: 1.1em;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-shadow: 0 0 4px rgba(0,0,0,0.5)
-}
-
-blockquote {
- text-align: center;
-  /* existing styles */
-  position: relative; /* needed for positioning pseudo elements */
-}
-
-blockquote:before {
-  content: open-quote;
-  font-size: 4em;
-  color: gold;
-  position: absolute;
-  left: 10px;
-  top: -10px;
-  font-style: italic;
-  opacity: 0.3;
-}
-
-blockquote:after {
-  content: close-quote;
-  font-size: 4em;
-  color: gold;
-  position: absolute;
-  right: 10px;
-  bottom: -20px;
-  font-style: italic;
-  opacity: 0.3;
-}
-
-/* Table styling with subtle borders and shading */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2em 0;
-  font-size: 1em;
-}
-
-th, td {
-  border: 1px solid #444;
-  padding: 12px 15px;
-  color: #eee;
-}
-
-th {
-  background-color: #222;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-tr:nth-child(even) {
-  background-color: #1a1a1a;
-}
-
-/* Links if you want to style */
-a {
-  color: #ff8c00;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
+    :root {
+      --gold: #FFD700;
+      --dark-gold: #C5A000;
+      --void: #050505;
+      --deep-space: #0a0a12;
+      --starlight: #e0e0ff;
+      --blood: #8a0303;
+      --transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    
+    /* Cosmic Background */
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #0a0a0a;
-      color: #f2f2f2;
-      line-height: 1.6;
-      padding: 20px;
+      padding: 0;
+      font-family: 'EB Garamond', serif;
+      color: var(--starlight);
+      background-color: var(--void);
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(138, 3, 3, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(197, 160, 0, 0.15) 0%, transparent 20%),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="0.5" fill="white" opacity="0.8"/><circle cx="30" cy="70" r="0.3" fill="white" opacity="0.6"/><circle cx="80" cy="20" r="0.4" fill="white" opacity="0.7"/><circle cx="60" cy="50" r="0.2" fill="white" opacity="0.5"/><circle cx="90" cy="90" r="0.3" fill="white" opacity="0.6"/></svg>');
+      line-height: 1.8;
+      overflow-x: hidden;
     }
 
+    /* Scrollbar styled like an ancient scroll */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--void);
+      border-left: 1px solid var(--dark-gold);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(var(--gold), var(--dark-gold));
+      border-radius: 6px;
+      border: 1px solid var(--void);
+    }
+
+    /* Cosmic Typography */
     h1, h2, h3 {
-      color: #e0e0e0;
+      font-family: 'Cinzel Decorative', serif;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 1.5em 0 0.8em;
       text-align: center;
+      position: relative;
     }
 
-    p, ul, blockquote, table {
-      max-width: 800px;
-      margin: auto;
+    h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(135deg, var(--gold) 20%, var(--starlight) 50%, var(--blood) 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+      margin-bottom: 0.5em;
+      animation: cosmicGlow 8s infinite alternate;
     }
 
+    h2 {
+      font-size: 2.2rem;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      color: var(--starlight);
+      font-style: italic;
+    }
+
+    @keyframes cosmicGlow {
+      0% { text-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+      50% { text-shadow: 0 0 25px rgba(255, 215, 0, 0.6), 0 0 40px rgba(138, 3, 3, 0.4); }
+      100% { text-shadow: 0 0 15px rgba(255, 215, 0, 0.3), 0 0 30px rgba(197, 160, 0, 0.5); }
+    }
+
+    /* Content Container with Ancient Scroll Effect */
+    .scroll-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      background: linear-gradient(to right, rgba(5, 5, 5, 0.9) 0%, rgba(10, 10, 18, 0.95) 50%, rgba(5, 5, 5, 0.9) 100%);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+
+    .scroll-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(to bottom, rgba(197, 160, 0, 0.2), transparent);
+      pointer-events: none;
+    }
+
+    .scroll-container::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: linear-gradient(to top, rgba(197, 160, 0, 0.2), transparent);
+      pointer-events: none;
+    }
+
+    /* Paragraphs with subtle animation */
+    p, ul, blockquote {
+      max-width: 700px;
+      margin: 1.5rem auto;
+      color: var(--starlight);
+      font-size: 1.1rem;
+      line-height: 1.9;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    p:hover, li:hover {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    /* Lists with custom bullets */
     ul {
-      padding-left: 1.2em;
+      list-style: none;
+      padding-left: 1.5rem;
     }
 
+    li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.8rem;
+    }
+
+    /* Blockquote with animated borders */
     blockquote {
-      background-color: #1a1a1a;
-      border-left: 3px solid #777;
-      padding: 10px 20px;
-      margin: 20px auto;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--gold);
+      padding: 2rem;
+      margin: 3rem auto;
+      position: relative;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 5px;
+      background: rgba(5, 5, 5, 0.5);
+      overflow: hidden;
     }
 
+    blockquote::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 215, 0, 0.1),
+        transparent
+      );
+      animation: shimmer 8s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Tables with celestial design */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 30px 0;
+      margin: 3rem auto;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    table::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, transparent 100%);
+      pointer-events: none;
     }
 
     th, td {
-      border: 1px solid #333;
-      padding: 10px;
+      padding: 1.2rem;
+      text-align: left;
+      border: 1px solid rgba(255, 215, 0, 0.2);
     }
 
     th {
-      background-color: #222;
+      background: linear-gradient(to right, rgba(138, 3, 3, 0.3), rgba(197, 160, 0, 0.3));
+      color: var(--gold);
+      font-family: 'Cinzel Decorative', serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     tr:nth-child(even) {
-      background-color: #111;
+      background: rgba(10, 10, 18, 0.5);
     }
 
-    em {
-      color: #cccccc;
+    tr:hover {
+      background: rgba(255, 215, 0, 0.1);
     }
 
-    strong {
-      color: #ffffff;
+    /* Links that glow when hovered */
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      position: relative;
+      transition: var(--transition);
     }
 
+    a::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: var(--transition);
+    }
+
+    a:hover {
+      text-shadow: 0 0 10px var(--gold);
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    /* Header with parallax effect */
     header {
-      background: radial-gradient(circle at center, #222 0%, #000 100%);
-      padding: 60px 20px;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-bottom: 40px;
-      border-bottom: 2px solid #333;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse at center, rgba(5, 5, 5, 0) 0%, var(--void) 70%), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M30,50 Q50,30 70,50 T90,50" stroke="rgba(255,215,0,0.1)" fill="none" stroke-width="0.5"/></svg>');
     }
 
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80" fill="none" stroke="rgba(138,3,3,0.05)" stroke-width="2"/><circle cx="100" cy="100" r="60" fill="none" stroke="rgba(197,160,0,0.05)" stroke-width="2"/><circle cx="100" cy="100" r="40" fill="none" stroke="rgba(255,215,0,0.05)" stroke-width="2"/></svg>');
+      background-size: 200px 200px;
+      opacity: 0.5;
+      animation: rotate 120s linear infinite;
     }
 
-    header p {
-      font-size: 1.2em;
-      color: #ccc;
-      max-width: 600px;
-      margin: auto;
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
-    /* Inserted image style */
-    #intro-image {
-      display: block;
-      max-width: 150px;
-      margin: 0 auto 30px auto;
-      border-radius: 15px;
-      box-shadow: 0 0 15px #ff8c00cc;
+    /* Da'ath Symbol with pulsing animation */
+    .daath-symbol {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 2rem;
+      background: url('https://raw.githubusercontent.com/Nac144/My-animations/refs/heads/main/R.png') center/contain no-repeat;
+      filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+      position: relative;
+      animation: pulse 6s infinite alternate;
+      transition: var(--transition);
+    }
+
+    .daath-symbol:hover {
+      transform: scale(1.1) rotate(5deg);
+      filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9));
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
+
+    /* Floating video in corner */
+    .floating-video {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 170px;
+      z-index: 1000;
+      border: 2px solid var(--gold);
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      transform: translateY(0);
+      transition: var(--transition);
+    }
+
+    .floating-video:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+
+    .floating-video iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Interactive pentagram trail */
+    .pentagram-trail {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,5 L61,38 L97,38 L68,59 L79,93 L50,72 L21,93 L32,59 L3,38 L39,38 Z" fill="rgba(255,215,0,0.7)"/></svg>') center/contain no-repeat;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.5s;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.8rem; }
+      h3 { font-size: 1.5rem; }
+      
+      .scroll-container {
+        padding: 2rem 1rem;
+      }
+      
+      .floating-video {
+        width: 200px;
+        height: 113px;
+      }
+    }
+
+    /* Secret interactive elements */
+    .secret-trigger {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 30px;
+      height: 30px;
+      background: rgba(255, 215, 0, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Cosmic portal effect - hidden until triggered */
+    .cosmic-portal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, rgba(5, 5, 5, 0.9) 70%);
+      z-index: 9998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 2s;
+    }
+
+    .portal-active {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
+  <!-- Cosmic Portal Effect -->
+  <div class="cosmic-portal"></div>
 
-  <!-- Inserted image at the very start -->
-  <img id="intro-image" src="https://raw.githubusercontent.com/Nac144/My-animations/refs/heads/main/R.png" alt="Da’ath Symbol" />
+  <!-- Secret Trigger -->
+  <div class="secret-trigger" title="Activate Portal"></div>
 
-  <header>
-    <h1>Da’ath — Gnosis Beyond the Binary Mind</h1>
-    <p>The hidden sefirah of knowledge: where duality dissolves into direct knowing, beyond time, beyond ego, beyond the cube.</p>
-  </header>
-
-  <h2>Da’ath as the Bridge of Consciousness</h2>
-  <p><strong>Da’ath</strong> (דעת), meaning "knowledge" in Hebrew, is the hidden gateway in Kabbalah — the union point between <em>Chokhmah</em> (wisdom) and <em>Binah</em> (understanding). Though not always shown as a sephirah, Da’ath emerges as <strong>the living spark of knowledge</strong> when intuition and structure fuse. In mystical systems, it becomes the <strong>threshold of gnosis</strong>: direct soul-level knowing, <em>beyond intellect</em>.</p>
-
-  <ul>
-    <li><strong>Union of Opposites:</strong> Da’ath arises from the interplay between Chokhmah (creative insight) and Binah (structured understanding).</li>
-    <li><strong>Portal Across the Abyss:</strong> Positioned across the Abyss, Da’ath serves as a <em>bridge between the supernal and the lower realms</em>.</li>
-    <li><strong>Knowledge as Inner Gnosis:</strong> Not just facts, but <em>deep, soul-level awareness</em> — a conscious knowing of the divine.</li>
-  </ul>
-
-  <h3>Gnosis vs the Binary Left Brain</h3>
-  <p>Modern neuroscience backs this up. The <strong>left hemisphere</strong> drives linear logic, future planning, and the ego-narrative. The <strong>right hemisphere</strong> perceives <em>holistic presence</em>, unity, and timeless awareness.</p>
-
-  <blockquote style="font-style: italic; margin: 10px 20px; padding: 10px; border-left: 3px solid #555;">
-    “The left hemisphere says: I am. I need to do. I must plan.”<br>
-    “The right hemisphere says: I am connected. I am now.”<br>
-    — Jill Bolte Taylor
-  </blockquote>
-
-  <p>Da’ath bypasses the repetitive, <strong>threat-detection loops</strong> of the binary mind — transcending ritualized behavior and assumption-driven logic. Instead, it offers <strong>direct knowing</strong>: not belief, not analysis, but <em>being-awareness</em>.</p>
-
-  <h3>Saturn, the Black Cube, and the Limits of the Binary Mind</h3>
-  <p>In esoteric symbolism, <strong>Saturn</strong> and the <strong>Black Cube</strong> represent limitation, structure, and form. These relate to the left-brain world: defined by time, death, logic, and ritual. Da’ath stands in contrast — a <strong>gateway beyond structure</strong>.</p>
-
-  <ul>
-    <li><strong>Saturn = Binah:</strong> Structure, time, boundaries, death.</li>
-    <li><strong>Black Cube:</strong> Material prison, six-sided law, rigid dualism.</li>
-    <li><strong>Da’ath:</strong> 11th hidden gate, infinite point beyond form.</li>
-  </ul>
-
-  <h3 style="text-align: center;">Summary Table</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Aspect</th>
-        <th>Binary Mind (Left-Brain / Saturn)</th>
-        <th>Da’ath / Gnostic Awareness</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Symbolic</strong></td>
-        <td>Black Cube, Saturn, Law</td>
-        <td>Tree of Knowledge, Portal to Gnosis</td>
-      </tr>
-      <tr>
-        <td><strong>Cognitive</strong></td>
-        <td>Linear logic, threat modeling, ritual</td>
-        <td>Holistic insight, soul-knowing, unity</td>
-      </tr>
-      <tr>
-        <td><strong>Spiritual</strong></td>
-        <td>Separation, form, ego-narrative</td>
-        <td>Integration, formless gnosis, present-being</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p style="text-align: center; font-style: italic;">Da’ath is not a belief. It is not a thought. It is what happens <strong>when you stop thinking</strong> and meet reality as it is.</p>
-
-  <div id="floating-video" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 320px;
-    height: 180px;
-    z-index: 9999;
-    border: 3px solid #222;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-    background: black;
-  ">
+  <!-- Floating Video -->
+  <div class="floating-video">
     <iframe
-      width="320"
-      height="180"
-      src="https://www.youtube.com/embed/MV_3Dpw-BRY"
+      width="300"
+      height="170"
+      src="https://www.youtube.com/embed/MV_3Dpw-BRY?autoplay=1&mute=1&enablejsapi=1"
       title="Floating Video"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
   </div>
-</body><script>
-document.addEventListener("DOMContentLoaded", () => {
-  const trailSize = 20; // pixel size of each pentagram
-  const trailLifetime = 800; // how long each stays in ms
-  const maxTrail = 30; // max number of pentagrams
 
-  let trailElements = [];
+  <!-- Header with Parallax -->
+  <header>
+    <div class="daath-symbol"></div>
+    <h1>Da'ath — The Portal to Gnosis</h1>
+    <p>The hidden sefirah where duality dissolves into direct knowing — beyond time, beyond ego, beyond the illusion of separation.</p>
+  </header>
 
-  document.addEventListener("mousemove", (e) => {
-    const trail = document.createElement("img");
-    trail.src = "https://pngimg.com/d/pentagram_PNG15.png";
-    trail.style.position = "fixed";
-    trail.style.pointerEvents = "none";
-    trail.style.width = trailSize + "px";
-    trail.style.height = trailSize + "px";
-    trail.style.left = (e.clientX - trailSize / 2) + "px";
-    trail.style.top = (e.clientY - trailSize / 2) + "px";
-    trail.style.opacity = "0.4";
-    trail.style.zIndex = "9999";
-    trail.style.transition = `opacity ${trailLifetime}ms ease-out, transform ${trailLifetime}ms ease-out`;
-    document.body.appendChild(trail);
+  <!-- Main Content in Ancient Scroll Container -->
+  <div class="scroll-container">
+    <h2>The Bridge of Consciousness</h2>
+    <p><strong>Da'ath</strong> (דעת), meaning "knowledge" in Hebrew, is the concealed gateway in the Kabbalistic Tree of Life — the dynamic intersection between <em>Chokhmah</em> (wisdom) and <em>Binah</em> (understanding). Though not always depicted as a sephirah, Da'ath manifests as <strong>the living spark of gnosis</strong> when intuition and structure unite in sacred marriage.</p>
 
-    // animate fade and slight scale
-    setTimeout(() => {
-      trail.style.opacity = "0";
-      trail.style.transform = "scale(0.6) rotate(90deg)";
-    }, 10);
+    <ul>
+      <li><strong>Union of Opposites:</strong> Da'ath emerges from the sacred tension between Chokhmah (creative insight) and Binah (structured understanding).</li>
+      <li><strong>Threshold of the Abyss:</strong> Positioned across the Great Void, Da'ath serves as the <em>bridge between the supernal triad and the manifested world</em>.</li>
+      <li><strong>Knowledge as Direct Experience:</strong> Not intellectual accumulation, but <em>soul-level revelation</em> — an unmediated encounter with the divine.</li>
+    </ul>
 
-    // remove after fade
-    setTimeout(() => {
-      trail.remove();
-    }, trailLifetime);
+    <blockquote>
+      "The knowledge of Da'ath is not acquired — it is remembered. <br>
+      It is the awakening to what the soul has always known."
+    </blockquote>
 
-    // manage trail limit
-    trailElements.push(trail);
-    if (trailElements.length > maxTrail) {
-      const oldest = trailElements.shift();
-      if (oldest) oldest.remove();
-    }
-  });
-});
-</script>
+    <h3>Gnosis vs. the Binary Mind</h3>
+    <p>Contemporary neuroscience echoes this ancient wisdom. The <strong>left hemisphere</strong> constructs linear narratives, future projections, and the illusion of separateness. The <strong>right hemisphere</strong> perceives <em>holistic presence</em>, interconnectedness, and timeless awareness.</p>
 
+    <blockquote>
+      "The left hemisphere says: I am. I need to do. I must control."<br>
+      "The right hemisphere says: I am part of. I am here. I am now."<br>
+      — Jill Bolte Taylor
+    </blockquote>
+
+    <p>Da'ath transcends the <strong>feedback loops</strong> of the binary mind — the compulsive patterning of threat-assessment and conceptual categorization. It offers instead <strong>direct apprehension</strong>: not belief, not interpretation, but <em>pure being-awareness</em>.</p>
+
+    <h3>Saturn, the Cube, and the Architecture of Limitation</h3>
+    <p>In esoteric cosmology, <strong>Saturn</strong> and the <strong>Black Cube</strong> symbolize the necessary illusions of structure, time, and mortality. These correspond to the left-brain paradigm: defined by separation, causality, and the prison of sequential experience. Da'ath represents the <strong>gateway beyond these constraints</strong>.</p>
+
+    <ul>
+      <li><strong>Saturn = Binah:</strong> The architect of form, the measure of time, the inevitability of dissolution.</li>
+      <li><strong>Black Cube:</strong> The material trap, six directions of limitation, the hologram of duality.</li>
+      <li><strong>Da'ath:</strong> The eleventh gate, the singularity point where all paradoxes resolve.</li>
+    </ul>
+
+    <h3>The Path Beyond Duality</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>Binary Mind (Left-Brain / Saturn)</th>
+          <th>Da'ath / Gnostic Awareness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Symbol</strong></td>
+          <td>Black Cube, Chronos, The Law</td>
+          <td>Tree of Knowledge, The Portal, The Void</td>
+        </tr>
+        <tr>
+          <td><strong>Perception</strong></td>
+          <td>Linear causality, separation, projection</td>
+          <td>Nondual presence, unity, immediacy</td>
+        </tr>
+        <tr>
+          <td><strong>Time</strong></td>
+          <td>Sequential, irreversible arrow</td>
+          <td>Eternal now, simultaneity</td>
+        </tr>
+        <tr>
+          <td><strong>Identity</strong></td>
+          <td>Fixed ego-narrative</td>
+          <td>Fluid beingness</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <blockquote style="text-align: center; font-style: italic; border: none;">
+      Da'ath is not attained — it is recognized.<br> 
+      It is what remains when all concepts of self and other dissolve<br>
+      into the luminous darkness of pure awareness.
+    </blockquote>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Enhanced Pentagram Trail
+      const pentagramTrail = [];
+      const maxTrail = 15;
+      
+      document.addEventListener('mousemove', (e) => {
+        const pentagram = document.createElement('div');
+        pentagram.className = 'pentagram-trail';
+        pentagram.style.left = `${e.clientX - 10}px`;
+        pentagram.style.top = `${e.clientY - 10}px`;
+        pentagram.style.opacity = '0.7';
+        pentagram.style.transform = 'scale(1) rotate(0deg)';
+        document.body.appendChild(pentagram);
+        
+        pentagramTrail.push(pentagram);
+        if (pentagramTrail.length > maxTrail) {
+          const oldPentagram = pentagramTrail.shift();
+          if (oldPentagram) oldPentagram.remove();
+        }
+        
+        setTimeout(() => {
+          pentagram.style.opacity = '0';
+          pentagram.style.transform = 'scale(0.5) rotate(180deg)';
+          setTimeout(() => pentagram.remove(), 500);
+        }, 100);
+      });
+      
+      // Cosmic Portal Activation
+      const portal = document.querySelector('.cosmic-portal');
+      const trigger = document.querySelector('.secret-trigger');
+      let portalActive = false;
+      
+      trigger.addEventListener('click', () => {
+        portalActive = !portalActive;
+        if (portalActive) {
+          portal.classList.add('portal-active');
+          document.body.style.background = 'radial-gradient(circle at center, rgba(255, 215, 0, 0.2) 0%, #050505 100%)';
+          trigger.style.boxShadow = '0 0 15px gold';
+        } else {
+          portal.classList.remove('portal-active');
+          document.body.style.background = '';
+          trigger.style.boxShadow = '';
+        }
+      });
+      
+      // Symbol interaction
+      const daathSymbol = document.querySelector('.daath-symbol');
+      daathSymbol.addEventListener('click', () => {
+        daathSymbol.style.animation = 'pulse 1s infinite alternate';
+        setTimeout(() => {
+          daathSymbol.style.animation = 'pulse 6s infinite alternate';
+        }, 3000);
+      });
+      
+      // Table row enlightenment effect
+      const tableRows = document.querySelectorAll('tr');
+      tableRows.forEach(row => {
+        row.addEventListener('mouseenter', () => {
+          row.style.boxShadow = '0 0 15px rgba(255, 215, 0, 0.3)';
+        });
+        row.addEventListener('mouseleave', () => {
+          row.style.boxShadow = 'none';
+        });
+      });
+      
+      // Mystical text glow
+      const paragraphs = document.querySelectorAll('p, li, blockquote');
+      paragraphs.forEach(p => {
+        p.addEventListener('mouseover', () => {
+          p.style.textShadow = '0 0 8px rgba(255, 215, 0, 0.5)';
+        });
+        p.addEventListener('mouseout', () => {
+          p.style.textShadow = 'none';
+        });
+      });
+    });
+  </script>
+</body>
 </html>
